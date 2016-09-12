@@ -1,8 +1,11 @@
 <article class="listing">
-  <img src="{{contract.image}}" alt="">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{contract.image}}" alt="">
+    <small>Agrandar Imagen</small>
+  </a>
   <h3>{{contract.name}}</h3>
   <div class="detail type">
-    <span>Tipo:</span> {{contract.type}}
+    <span>Tipo:</span> {{contract.type}} \n {{contract-spy-type contract.type}}
   </div>
   <div class="detail city">
     <span>Ciudad:</span> {{contract.city}}
